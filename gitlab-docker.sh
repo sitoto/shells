@@ -1,3 +1,5 @@
+#太费资源了，，，启起来都要3G 了，运行后只会增加了
+# 内存4G 还有别的应用，不敢用了，改成gogs
 #https://www.cnblogs.com/int32bit/p/5310382.html
 docker pull gitlab/gitlab-ce
 

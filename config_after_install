@@ -1,0 +1,4 @@
+ npm config set registry http://registry.npm.taobao.org/
+ yarn config set registry http://registry.npm.taobao.org/
+ bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+

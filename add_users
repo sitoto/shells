@@ -1,0 +1,23 @@
+#!/bin/bash
+sudo apt update
+sudo apt-get -y install whois 
+temp_pwd=$(mkpasswd -m sha-512 'vtr512')
+sudo su -c "echo $temp_pwd > /mwdata/shell/temp_pwd"
+
+sudo useradd -m -s /bin/bash deploy
+sudo passwd -l deploy
+
+echo "### set deploy to sudoers"
+if sudo grep "deploy" /etc/sudoers -q 
+then
+echo deploy params already set to sudoers!
+else
+echo doing...
+sudo su -c "echo '%deploy ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
+echo done.
+fi
+
+sudo useradd -m -p $temp_pwd -s /bin/bash hw
+sudo useradd -m -p $temp_pwd -s /bin/bash kevin
+
+

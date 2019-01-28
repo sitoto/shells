@@ -1,0 +1,2 @@
+scp cp /home/hw/wspaces/delitao/app/build/outputs/apk/other/release/dlt_v1.2.3_20181227.apk  root@www.369hi.com:/data/www/369hi/current/public/
+
